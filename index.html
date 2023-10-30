@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>OOP</title>
 </head>
-<body>
-    <div class="root">Всем привет</div>
-    <script src="./lib/index.js"></script>
+<body class="page">
+  <div class="container">
+    <form class="form" action="./action.js">
+
+      <div class="request-choise">
+        <label class="label" for="fetch">
+          <input class="radio-button" type="radio" name="request-type" value="fetch" id="fetch">
+          <span class="description">fetch</span>
+        </label>
+        
+        <label class="label" for="xml">
+          <input class="radio-button" type="radio" name="request-type" value="xml" id="xml">
+          <span class="description">xml</span>
+        </label>
+      </div>
+
+      <div class="interactive">
+        <div class="action-buttons">
+          <button type="button" class="button get-tasks">Get tasks</button>
+          <button type="button" class="button get-task-by-id">Get task by ID</button>
+          <button type="button" class="button update-task-by-id">Update task</button>
+          <button type="button" class="button add-task">Add task</button>
+          <button type="button" class="button delete-task">Delete task</button>
+        </div>
+
+        <div class="values">
+          <input type="number" class="input input-id" placeholder="ID" value="0">
+          <input type="text" class="input input-name" placeholder="name" value="new name">
+          <input type="text" class="input input-info" placeholder="info" value="new info">
+          <label for="importance" class="label">
+            <input name="importance" type="checkbox" class="checkbox" placeholder="isImportant">
+            <span class="description">is important?</span>
+          </label>
+          <button type="reset" class="button reset">Reset</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+  <img src="./img/meme.jpeg" alt="Difficult choise" width="500px">
+
+  
+
+
+
+  <script type="module" src="./lib/index.js"></script>
 </body>
 </html>
